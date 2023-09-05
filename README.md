@@ -1,29 +1,47 @@
-# Arabic-Phonetiser
-Convert Arabic diacritised text to a sequence of phonemes and create a pronunciation dictionary from them for alignment using HTK
+# Arabic Phonetiser
 
-# Usage
-      from phonetise-Arabic import phonetise
-      phonemes = phonetise(Arabic_text)
-      
-or
-      
-      phonetise-Buckwalter.py [inputfile]
+## Introduction
 
-[inputfile] should be a utf8 text file contianing in every line:
+This package is a Python library for phonetising Arabic text, with a focus on dialects like the Iraqi dialect. It is a fork of Nawar Halabi's [Arabic-Phonetiser](https://github.com/nawarhalabi/Arabic-Phonetiser), but differs in that it is simplified and includes characters commonly used in Arabic dialects.
 
-      "[sound-filename]" "[arabic-text-in-buckwalter]"
-      "[sound-filename]" "[arabic-text-in-buckwalter]"
-      "[sound-filename]" "[arabic-text-in-buckwalter]"
-      "[sound-filename]" "[arabic-text-in-buckwalter]"
-      ...
-the output will be two files:
-dict: contianing the sorted pronunciation dicationary with a carrage return at the end for use with tools like HTK
-utterance-pronunciations.txt: A file contianing in every line:
+## Features
 
-      "[sound-filename]" "[phoneme-sequence]"
-      "[sound-filename]" "[phoneme-sequence]"
-      "[sound-filename]" "[phoneme-sequence]"
-      "[sound-filename]" "[phoneme-sequence]"
-# License
+- **Simplified Phonetisation**: The phonetisation process has been simplified for easier understanding and manipulation.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+- **Support for Additional Arabic Characters**: This package extends the standard Arabic character set to include characters that are specific to various Arabic dialects, such as the Iraqi dialect. These additional characters are:
+    - Buckwalter: `u'C'`, Arabic: 'چ', used in words like چاي
+    - Buckwalter: `u'G'`, Arabic: 'گ', used in words like گول
+    - Buckwalter: `u'P'`, Arabic: 'پ', used in words like پپسي
+    - Buckwalter: `u'ı'`, Arabic: 'ـ', known as Taweel, used exclusively in dialectal Arabic as a vowel. Its pronunciation is similar to the 'ı' in Turkish.
+
+## Installation
+
+```bash
+pip install arabic-phonetiser
+```
+
+## Usage
+
+Here is a simple example:
+
+```python
+import arabic_phonetiser
+
+arabic_text = "أگُلّـچْ يَبـنْتي وأَسَمْعـچْ يَچَنْتي"
+phon_text = arabic_phonetiser.arabic_to_phonemes(arabic_text)
+print(phon_text)
+```
+
+Output:
+
+```
+< a G u ll ı C + y a b ı n t ii + uu < a s a m E ı C + y a C a n t ii
+```
+
+## License
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. The original work is by Nawar Halabi. For the full license text, please see the LICENSE file in the repository.
+
+## Acknowledgements
+
+This work is a fork of [Nawar Halabi's Arabic-Phonetiser](https://github.com/nawarhalabi/Arabic-Phonetiser). Special thanks to Nawar Halabi for the original work.
