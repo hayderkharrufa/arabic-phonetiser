@@ -1,5 +1,5 @@
-from text.symbols import symbols, DOUBLING_TOKEN, EOS_TOKEN, SEPARATOR_TOKEN
-from text.phonetise_buckwalter import (
+from .symbols import symbols, DOUBLING_TOKEN, EOS_TOKEN, SEPARATOR_TOKEN
+from .phonetise_buckwalter import (
     arabic_to_buckwalter,
     buckwalter_to_arabic,
     process_utterance
@@ -29,9 +29,17 @@ def ids_to_tokens(ids):
     return [symbols[id] for id in ids]
 
 
-def arabic_to_phonemes(arabic):
-    buckw = arabic_to_buckwalter(arabic)
-    return process_utterance(buckw)
+def arabic_to_phonemes(arabic_text):
+    # Convert the Arabic text to Buckwalter transliteration
+    buck_text = arabic_to_buckwalter(arabic_text)
+    
+    # Convert the Buckwalter text to phonemes
+    phon_text = process_utterance(buck_text)
+    
+    # Simplify the phonemes
+    simplified_phon_text = simplify_phonemes(phon_text)
+    
+    return simplified_phon_text
 
 
 def buckwalter_to_phonemes(buckw):
