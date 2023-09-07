@@ -46,6 +46,7 @@ symbols = [
     'G',  # gaf
     'C',  # cheen
     'P',  # paa
+    'V',  # vaa
     # vowels
     'a',  # fatha short
     'u',  # damma short

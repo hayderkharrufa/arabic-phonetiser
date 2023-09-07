@@ -12,6 +12,7 @@ This package is a Python library for phonetising Arabic text, with a focus on di
     - Buckwalter: `u'C'`, Arabic: 'چ', used in words like چاي
     - Buckwalter: `u'G'`, Arabic: 'گ', used in words like گول
     - Buckwalter: `u'P'`, Arabic: 'پ', used in words like پپسي
+    - Buckwalter: `u'V'`, Arabic: 'ڤ', used in words like ڤيتامين
     - Buckwalter: `u'ı'`, Arabic: 'ـ', known as Taweel, used exclusively in dialectal Arabic as a vowel. Its pronunciation is similar to the 'ı' in Turkish.
     
 - **Utilizes the [arabic-buckwalter-transliteration](https://github.com/hayderkharrufa/arabic-buckwalter-transliteration/tree/main) package for supporting these new characters.**
