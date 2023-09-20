@@ -37,9 +37,10 @@ def arabic_to_phonemes(arabic_text):
     phon_text = process_utterance(buck_text)
     
     # Simplify the phonemes
-    simplified_phon_text = simplify_phonemes(phon_text)
+    #simplified_phon_text = simplify_phonemes(phon_text)
     
-    return simplified_phon_text
+    #return simplified_phon_text
+    return phon_text
 
 
 def buckwalter_to_phonemes(buckw):
