@@ -42,7 +42,7 @@ print(phon_text)
 Output:
 
 ```
-< a G u ll ı C + y a b ı n t ii + uu < a s a m E ı C + y a C a n t ii
+< a G u0 ll ı C + y a b ı n t ii0 + uu0 < a s a m E ı C + y a C a n t ii0
 ```
 
 ## License
