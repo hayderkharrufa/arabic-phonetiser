@@ -21,7 +21,7 @@ unambiguousConsonantMap = {
     u'$': u'$', u'd': u'd', u'D': u'D', u'k': u'k',
     u'>': u'<', u'\'': u'<', u'}': u'<', u'&': u'<',
     u'<': u'<', u'G': u'G', u'C': u'C', u'P':u'P',
-    u'V': u'V'
+    u'V': u'V', u'e': u'e', u'O': u'O', u'L': u'L'
 }
 
 ambiguousConsonantMap = {

@@ -47,11 +47,14 @@ symbols = [
     'C',  # cheen
     'P',  # paa
     'V',  # vaa
+    'e',  # heavy yaa'
+    'O',  # heavy waaw
+    'L',  # heavy laam
     # vowels
     'a',  # fatha short
     'u',  # damma short
     'i',  # kasra short
-    'ı',  # iraqi kasra (pronounciation similar to 'ı' letter Turkish)
+    'ı',  # light kasra (pronounciation similar to 'ı' letter Turkish)
     'aa', # fatha long
     'uu', # damma long
     'ii', # kasra short
