@@ -77,7 +77,7 @@ fixedWords = {
     u'AlrHmn': [u'rr a H m aa n i0',  u'rr a H m aa n'],
     u'Allh': [u'll aa h i0', u'll aa h', u'll AA h u0', u'll AA h a', u'll AA h', u'll A'],
     u'h*yn': [u'h aa * a y n i0', u'h aa * a y n'],
-    u'nt': u'n i1 t',
+    #u'nt': u'n i1 t',
     u'fydyw': u'v i0 d y uu1',
     u'lndn': u'l A n d u1 n'
 }
